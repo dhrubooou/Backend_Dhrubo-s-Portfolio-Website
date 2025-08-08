@@ -1,12 +1,15 @@
-// server/index.js
-const express = require("express");
-const nodemailer = require("nodemailer");
-const cors = require("cors");
-require("dotenv").config();
+// index.js
+import express from "express";
+import nodemailer from "nodemailer";
+import cors from "cors";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 const app = express();
 const PORT = process.env.PORT || 5000;
 
+// Allow CORS (you can whitelist your frontend URL later)
 app.use(cors());
 app.use(express.json());
 
